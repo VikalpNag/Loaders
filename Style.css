@@ -1,5 +1,35 @@
 .wrap {
   height: 200px;
   width: 200px;
-  background-color: grey;
+  background-color: whitesmoke;
+}
+
+svg {
+  height: 200px;
+  width: 200px;
+}
+
+.circular {
+  animation: circleshow 1.6s ease-in-out infinite;
+}
+
+@keyframes circleshow {
+  0% {
+    stroke-dasharray: 10, 510;
+  }
+  50% {
+    stroke-dasharray: 170, 510;
+  }
+  100% {
+    stroke-dasharray: 170, 510;
+    stroke-dashoffset: -510;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
