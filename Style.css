@@ -1,7 +1,15 @@
 .wrap {
   height: 200px;
   width: 200px;
-  background-color: whitesmoke;
+}
+.rotate {
+  animation: rotate 1.6s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 svg {
@@ -30,6 +38,44 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+line {
+  animation: lineshow 1.6s ease-in-out infinite;
+}
+
+@keyframes lineshow {
+  0% {
+    stroke-dasharray: 10, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: -200;
+  }
+}
+
+polyline {
+  animation: polyshow 1.6s ease-in-out infinite;
+}
+
+@keyframes polyshow {
+  0% {
+    stroke-dasharray: 180, 200;
+    stroke-dashoffset: 50;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dasharray: 0, 200;
+    stroke-dashoffset: 100;
+  }
 }
